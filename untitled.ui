@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+
+ <widget class="QWidget" name="Form">
+
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>880</width>
+    <height>779</height>
+   </rect>
+  </property>
+
+  <property name="windowTitle">
+   <string>Movie Recommendation</string>
+  </property>
+
+  <property name="styleSheet">
+   <string notr="true">
+
+QWidget#Form {
+    background-color: #111827;
+}
+
+/* 제목 */
+QLabel#label {
+    color: #FFFFFF;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+/* 영화 선택 */
+QComboBox#cb_title {
+    background-color: #1F2937;
+    color: #F9FAFB;
+    border: 2px solid #6366F1;
+    border-radius: 18px;
+    padding-left: 20px;
+}
+
+QComboBox#cb_title:hover {
+    border: 2px solid #8B5CF6;
+}
+
+QComboBox#cb_title::drop-down {
+    border: none;
+    width: 40px;
+}
+
+QComboBox#cb_title::down-arrow {
+    image: none;
+    border: none;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #111827;
+    color: #FFFFFF;
+    selection-background-color: #7C3AED;
+    selection-color: #FFFFFF;
+    border: 2px solid #6366F1;
+    outline: none;
+}
+
+/* 키워드 입력 */
+QLineEdit#le_keyword {
+    background-color: #1F2937;
+    color: #F9FAFB;
+    border: 2px solid #374151;
+    border-radius: 18px;
+    padding-left: 20px;
+}
+
+QLineEdit#le_keyword:focus {
+    border: 2px solid #8B5CF6;
+}
+
+/* 추천 버튼 */
+QPushButton#btn_recommend {
+    background-color: #7C3AED;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+QPushButton#btn_recommend:hover {
+    background-color: #8B5CF6;
+}
+
+QPushButton#btn_recommend:pressed {
+    background-color: #6D28D9;
+}
+
+/* 결과 영역 */
+QLabel#lb_recommendation {
+    background-color: #1F2937;
+    color: #E5E7EB;
+    border: 2px solid #374151;
+    border-radius: 28px;
+    padding: 30px;
+    font-size: 18px;
+}
+
+   </string>
+  </property>
+
+  <!-- 제목 -->
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>45</y>
+     <width>791</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>🎬 AI 영화 추천 시스템</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+
+  <!-- 영화 선택 -->
+  <widget class="QComboBox" name="cb_title">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>145</y>
+     <width>791</width>
+     <height>62</height>
+    </rect>
+   </property>
+
+   <property name="font">
+    <font>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+
+   <property name="maxVisibleItems">
+    <number>12</number>
+   </property>
+
+  </widget>
+
+  <!-- 키워드 -->
+  <widget class="QLineEdit" name="le_keyword">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>235</y>
+     <width>520</width>
+     <height>65</height>
+    </rect>
+   </property>
+
+   <property name="font">
+    <font>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+
+   <property name="placeholderText">
+    <string>키워드를 입력하세요 (예: 액션, 감동, 로맨스)</string>
+   </property>
+  </widget>
+
+  <!-- 추천 버튼 -->
+  <widget class="QPushButton" name="btn_recommend">
+   <property name="geometry">
+    <rect>
+     <x>585</x>
+     <y>235</y>
+     <width>245</width>
+     <height>65</height>
+    </rect>
+   </property>
+
+   <property name="text">
+    <string>추천 받기</string>
+   </property>
+  </widget>
+
+  <!-- 결과 -->
+  <widget class="QLabel" name="lb_recommendation">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>340</y>
+     <width>791</width>
+     <height>370</height>
+    </rect>
+   </property>
+
+   <property name="text">
+    <string>추천 결과가 여기에 표시됩니다.</string>
+   </property>
+
+   <property name="alignment">
+    <set>Qt::AlignTop|Qt::AlignLeft</set>
+   </property>
+
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+
+ </widget>
+
+ <resources/>
+ <connections/>
+
+</ui>
